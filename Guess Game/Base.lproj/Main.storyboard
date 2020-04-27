@@ -24,22 +24,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zV7-W5-rdd">
-                                <rect key="frame" x="20" y="254.5" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zV7-W5-rdd">
+                                <rect key="frame" x="20" y="254.5" width="280" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egh-6x-8Xb">
-                                <rect key="frame" x="50" y="301.5" width="220" height="30"/>
+                                <rect key="frame" x="50" y="302.5" width="220" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="ASCIICapableNumberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKt-Wr-CzF">
-                                <rect key="frame" x="137" y="381" width="46" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Enter"/>
+                                <rect key="frame" x="20" y="382" width="280" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="guess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ikg-El-WtQ"/>
                                 </connections>
@@ -51,13 +53,13 @@
                             <constraint firstItem="dKt-Wr-CzF" firstAttribute="top" secondItem="Egh-6x-8Xb" secondAttribute="bottom" constant="49.5" id="O6g-ZH-5qN"/>
                             <constraint firstItem="372-Qc-UAD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="WdX-GG-hsG"/>
                             <constraint firstItem="Egh-6x-8Xb" firstAttribute="top" secondItem="zV7-W5-rdd" secondAttribute="bottom" constant="26" id="gvX-wX-lOp"/>
-                            <constraint firstItem="dKt-Wr-CzF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="hqq-ku-nUK"/>
+                            <constraint firstItem="dKt-Wr-CzF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hqq-ku-nUK"/>
                             <constraint firstItem="Egh-6x-8Xb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lS4-5m-WnE"/>
                             <constraint firstItem="zV7-W5-rdd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mYL-vP-dV9"/>
                             <constraint firstItem="372-Qc-UAD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="mfq-zu-YH8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zV7-W5-rdd" secondAttribute="trailing" constant="20" id="ncn-Be-xM2"/>
                             <constraint firstItem="zV7-W5-rdd" firstAttribute="top" secondItem="372-Qc-UAD" secondAttribute="bottom" constant="152" id="tQC-vB-ApE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dKt-Wr-CzF" secondAttribute="trailing" constant="137" id="wyn-vu-VAh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dKt-Wr-CzF" secondAttribute="trailing" constant="20" id="wyn-vu-VAh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="372-Qc-UAD" secondAttribute="trailing" constant="50" id="zOE-r6-49n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
