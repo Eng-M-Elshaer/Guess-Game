@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		64FCF2212227F3C200F93FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FCF2202227F3C200F93FAD /* AppDelegate.swift */; };
-		64FCF2232227F3C200F93FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FCF2222227F3C200F93FAD /* ViewController.swift */; };
+		64FCF2232227F3C200F93FAD /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FCF2222227F3C200F93FAD /* MainVC.swift */; };
 		64FCF2262227F3C200F93FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FCF2242227F3C200F93FAD /* Main.storyboard */; };
 		64FCF2282227F3C500F93FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FCF2272227F3C500F93FAD /* Assets.xcassets */; };
 		64FCF22B2227F3C500F93FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FCF2292227F3C500F93FAD /* LaunchScreen.storyboard */; };
+		E2A797C0245DB37B00874767 /* SelectDifficultyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */; };
+		E2A797C6245DBA1F00874767 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797C4245DBA1F00874767 /* ScoreCell.swift */; };
+		E2A797C7245DBA1F00874767 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A797C5245DBA1F00874767 /* ScoreCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		64FCF21D2227F3C200F93FAD /* Guess Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FCF2202227F3C200F93FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		64FCF2222227F3C200F93FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		64FCF2222227F3C200F93FAD /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		64FCF2252227F3C200F93FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64FCF2272227F3C500F93FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64FCF22A2227F3C500F93FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64FCF22C2227F3C500F93FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDifficultyVC.swift; sourceTree = "<group>"; };
+		E2A797C4245DBA1F00874767 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		E2A797C5245DBA1F00874767 /* ScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +61,48 @@
 			isa = PBXGroup;
 			children = (
 				64FCF2202227F3C200F93FAD /* AppDelegate.swift */,
-				64FCF2222227F3C200F93FAD /* ViewController.swift */,
-				64FCF2242227F3C200F93FAD /* Main.storyboard */,
-				64FCF2272227F3C500F93FAD /* Assets.xcassets */,
-				64FCF2292227F3C500F93FAD /* LaunchScreen.storyboard */,
+				E2A797C1245DB6D700874767 /* Controller */,
+				E2A797C2245DB6F000874767 /* View */,
+				E2A797C3245DB70500874767 /* Resoures */,
 				64FCF22C2227F3C500F93FAD /* Info.plist */,
 			);
 			path = "Guess Game";
+			sourceTree = "<group>";
+		};
+		E2A797C1245DB6D700874767 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				64FCF2222227F3C200F93FAD /* MainVC.swift */,
+				E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2A797C2245DB6F000874767 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2A797C8245DBA3000874767 /* Cells */,
+				64FCF2242227F3C200F93FAD /* Main.storyboard */,
+				64FCF2292227F3C500F93FAD /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2A797C3245DB70500874767 /* Resoures */ = {
+			isa = PBXGroup;
+			children = (
+				64FCF2272227F3C500F93FAD /* Assets.xcassets */,
+			);
+			path = Resoures;
+			sourceTree = "<group>";
+		};
+		E2A797C8245DBA3000874767 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E2A797C5245DBA1F00874767 /* ScoreCell.xib */,
+				E2A797C4245DBA1F00874767 /* ScoreCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +165,7 @@
 			files = (
 				64FCF22B2227F3C500F93FAD /* LaunchScreen.storyboard in Resources */,
 				64FCF2282227F3C500F93FAD /* Assets.xcassets in Resources */,
+				E2A797C7245DBA1F00874767 /* ScoreCell.xib in Resources */,
 				64FCF2262227F3C200F93FAD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64FCF2232227F3C200F93FAD /* ViewController.swift in Sources */,
+				64FCF2232227F3C200F93FAD /* MainVC.swift in Sources */,
 				64FCF2212227F3C200F93FAD /* AppDelegate.swift in Sources */,
+				E2A797C6245DBA1F00874767 /* ScoreCell.swift in Sources */,
+				E2A797C0245DB37B00874767 /* SelectDifficultyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
