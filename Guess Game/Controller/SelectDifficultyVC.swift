@@ -12,19 +12,30 @@ class SelectDifficultyVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func goToVC(level:Int){
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+        vc.level = level
+        self.present(vc, animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func selectDifficultyBtnPressed(_ sender: UIButton) {
+        
+        let btnTitle = sender.titleLabel?.text
+        
+        switch btnTitle {
+        case "Easy":
+            goToVC(level: 1)
+        case "Medium":
+            goToVC(level: 2)
+        case "Hard":
+            goToVC(level: 3)
+        default:
+            print("Error")
+        }
+        
+    }
+    
 }

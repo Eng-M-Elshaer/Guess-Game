@@ -15,6 +15,8 @@
 		E2A797C0245DB37B00874767 /* SelectDifficultyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */; };
 		E2A797C6245DBA1F00874767 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797C4245DBA1F00874767 /* ScoreCell.swift */; };
 		E2A797C7245DBA1F00874767 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A797C5245DBA1F00874767 /* ScoreCell.xib */; };
+		E2A797CA245DC92300874767 /* GameEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797C9245DC92300874767 /* GameEndVC.swift */; };
+		E2A797CC245DC94800874767 /* ScoresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797CB245DC94800874767 /* ScoresVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDifficultyVC.swift; sourceTree = "<group>"; };
 		E2A797C4245DBA1F00874767 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		E2A797C5245DBA1F00874767 /* ScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
+		E2A797C9245DC92300874767 /* GameEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameEndVC.swift; path = "Guess Game/View/Cells/GameEndVC.swift"; sourceTree = SOURCE_ROOT; };
+		E2A797CB245DC94800874767 /* ScoresVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScoresVC.swift; path = "Guess Game/View/ScoresVC.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +76,10 @@
 		E2A797C1245DB6D700874767 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				64FCF2222227F3C200F93FAD /* MainVC.swift */,
 				E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */,
+				64FCF2222227F3C200F93FAD /* MainVC.swift */,
+				E2A797C9245DC92300874767 /* GameEndVC.swift */,
+				E2A797CB245DC94800874767 /* ScoresVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 			files = (
 				64FCF2232227F3C200F93FAD /* MainVC.swift in Sources */,
 				64FCF2212227F3C200F93FAD /* AppDelegate.swift in Sources */,
+				E2A797CA245DC92300874767 /* GameEndVC.swift in Sources */,
+				E2A797CC245DC94800874767 /* ScoresVC.swift in Sources */,
 				E2A797C6245DBA1F00874767 /* ScoreCell.swift in Sources */,
 				E2A797C0245DB37B00874767 /* SelectDifficultyVC.swift in Sources */,
 			);
