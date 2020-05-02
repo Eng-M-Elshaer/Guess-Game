@@ -1,8 +1,9 @@
 # Guess-Game
 Simple Guess Number Game Fun to Play
 
-![Apr-12-2020 16-14-35](https://user-images.githubusercontent.com/29343159/79071241-f72f2c00-7cda-11ea-8281-6de5108db798.gif)
-![2](https://user-images.githubusercontent.com/29343159/79071981-e1bc0100-7cde-11ea-8668-9d6b97f2d079.gif)
+![win](https://user-images.githubusercontent.com/29343159/80378598-304fca80-889d-11ea-8fbf-110665586ae5.gif)
+![Lose](https://user-images.githubusercontent.com/29343159/80381028-9d189400-88a0-11ea-8f41-e958add05f07.gif)
+
 
 
 ## Usage
