@@ -18,7 +18,8 @@ class SelectDifficultyVC: UIViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "MainVC") as! MainVC
         vc.level = level
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+//        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func selectDifficultyBtnPressed(_ sender: UIButton) {
@@ -33,7 +34,7 @@ class SelectDifficultyVC: UIViewController {
         case "Hard":
             goToVC(level: 3)
         default:
-            print("Error")
+            print("Error in title Button")
         }
         
     }

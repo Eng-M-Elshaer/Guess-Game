@@ -40,10 +40,9 @@ class MainVC: UIViewController {
         case 3:
             levelCounter = 1
         default:
-            print("Error")
+            print("Error in difficulty func")
         }
     }
-    
     
     private func setTimesLeft(){
         if levelCounter == 1 {
@@ -51,8 +50,8 @@ class MainVC: UIViewController {
             startOver()
         } else {
             self.levelCounter -= 1
-            guessField.text = ""
             tryAgainAlert(number: levelCounter)
+            guessField.text = ""
         }
     }
     
@@ -80,7 +79,7 @@ class MainVC: UIViewController {
                 goToVC(score: theCount)
                 startOver()
             default:
-                print("Error")
+                print("Error in switch level")
             }
             
         }
@@ -99,9 +98,10 @@ class MainVC: UIViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "GameEndVC") as! GameEndVC
         vc.score = (score + 1) * 10
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+
+//        self.present(vc, animated: true, completion: nil)
     }
-    
     
     private func startOver(){
         theCount = 0
@@ -114,7 +114,6 @@ class MainVC: UIViewController {
         guessField.text = ""
     }
     
-   
     override func viewDidLoad() {
         
         super.viewDidLoad()
