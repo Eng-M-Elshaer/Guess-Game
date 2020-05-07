@@ -100,7 +100,7 @@ class MainVC: UIViewController {
             goToEndGameVC(score: theCount)
             startOver()
             
-        } else if guessField.text == String(theGuesses[0]) || guessField.text == String(theGuesses[theCount]){
+        } else if guessField.text == String(theGuesses[theCount]){
             
             playSound(toneName: "win")
             theCount = theCount + 1
