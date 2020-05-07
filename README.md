@@ -9,6 +9,9 @@ Simple Guess Number Game Fun to Play
 ## Usage
 Try to Guess number between specific range:
 
-you have 10 levels and one guess 😈.
+you have 10 levels and one multiple levels (Easy,Medium,Hard) 😈.
 
 Try it and check your LUCK.
+
+## Technologies Used
+R.Swift, SQLite Swift, IQkeyboardmanagerswift.
