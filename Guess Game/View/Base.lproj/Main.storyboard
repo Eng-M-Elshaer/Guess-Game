@@ -10,6 +10,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--SplashVC-->
+        <scene sceneID="Y3v-xC-Y7o">
+            <objects>
+                <viewController storyboardIdentifier="SplashVC" id="pOO-7D-uY7" customClass="SplashVC" customModule="Guess_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IuI-2R-fHb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test You're Luck 😈" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TYo-az-UiF">
+                                <rect key="frame" x="20" y="270" width="280" height="48"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="44"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76067807330000003" green="0.49789310279999999" blue="0.79895701139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TYo-az-UiF" firstAttribute="leading" secondItem="n9y-bo-GJq" secondAttribute="leading" constant="20" id="2rG-Hl-Wsn"/>
+                            <constraint firstItem="n9y-bo-GJq" firstAttribute="trailing" secondItem="TYo-az-UiF" secondAttribute="trailing" constant="20" id="Nut-z3-eIk"/>
+                            <constraint firstItem="TYo-az-UiF" firstAttribute="centerY" secondItem="n9y-bo-GJq" secondAttribute="centerY" id="npB-B1-bJV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n9y-bo-GJq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gd3-NR-b17"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19s-HO-dJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-176.25" y="32.74647887323944"/>
+        </scene>
         <!--Select DifficultyVC-->
         <scene sceneID="d1Q-QN-qk3">
             <objects>
@@ -150,19 +179,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j3D-9o-jS5">
-                                <rect key="frame" x="29.5" y="249.5" width="261" height="89"/>
+                                <rect key="frame" x="20" y="249.5" width="280" height="89"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kqd-3l-dHB">
-                                        <rect key="frame" x="0.0" y="0.0" width="261" height="89"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="89"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter You're Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ntd-2J-FOf">
-                                                <rect key="frame" x="0.0" y="0.0" width="261" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSx-wL-XZw">
-                                                <rect key="frame" x="0.0" y="50" width="261" height="39"/>
+                                                <rect key="frame" x="0.0" y="50" width="280" height="39"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                                 <state key="normal" title="Enter">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -174,19 +203,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Iri-DY-xvl">
-                                        <rect key="frame" x="0.0" y="0.0" width="261" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-GB-tou">
-                                                <rect key="frame" x="0.0" y="0.0" width="261" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="aI4-cz-o4K">
-                                                <rect key="frame" x="0.0" y="20" width="261" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="20" width="280" height="0.0"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UND-qV-6lJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                                         <state key="normal" title="View Scores">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -197,7 +226,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTR-iq-SvC">
-                                                        <rect key="frame" x="143" y="0.0" width="118" height="0.0"/>
+                                                        <rect key="frame" x="152.5" y="0.0" width="127.5" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                                         <state key="normal" title="Play Again">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -217,8 +246,10 @@
                         <color key="backgroundColor" red="0.76067807330000003" green="0.49789310279999999" blue="0.79895701139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="k1h-F9-Fuk" firstAttribute="centerX" secondItem="Lnj-fg-7dr" secondAttribute="centerX" id="3mT-at-O8P"/>
+                            <constraint firstItem="Lnj-fg-7dr" firstAttribute="trailing" secondItem="j3D-9o-jS5" secondAttribute="trailing" constant="20" id="4rH-UZ-bHf"/>
                             <constraint firstItem="k1h-F9-Fuk" firstAttribute="top" secondItem="Lnj-fg-7dr" secondAttribute="top" constant="40" id="JVJ-aH-bmL"/>
                             <constraint firstItem="j3D-9o-jS5" firstAttribute="centerY" secondItem="Lnj-fg-7dr" secondAttribute="centerY" id="NZA-Bz-dmn"/>
+                            <constraint firstItem="j3D-9o-jS5" firstAttribute="leading" secondItem="Lnj-fg-7dr" secondAttribute="leading" constant="20" id="OAa-ys-xwn"/>
                             <constraint firstItem="j3D-9o-jS5" firstAttribute="centerX" secondItem="Lnj-fg-7dr" secondAttribute="centerX" id="TOE-X6-YOl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Lnj-fg-7dr"/>
@@ -290,12 +321,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="X5o-BF-y0O" kind="relationship" relationship="rootViewController" id="pns-Xm-Fae"/>
+                        <segue destination="pOO-7D-uY7" kind="relationship" relationship="rootViewController" id="fmR-nh-MTj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sw4-I8-Dsk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-360" y="32.74647887323944"/>
+            <point key="canvasLocation" x="-1202" y="33"/>
         </scene>
     </scenes>
 </document>

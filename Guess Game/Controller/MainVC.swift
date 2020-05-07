@@ -24,8 +24,6 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Helper.setBackgroundColor(vc: self)
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,9 +53,15 @@ class MainVC: UIViewController {
         
         theGuesses.removeAll()
         
-        for i in 0 ..< rangeArray.count {
-            let number = Int.random(in: 0 ... rangeArray[i])
-            theGuesses.append(number)
+        var i = 0
+        
+        while i < rangeArray.count {
+            
+            let randomNuber = Int.random(in: 0 ... rangeArray[i])
+            if !theGuesses.contains(randomNuber){
+                theGuesses.append(randomNuber)
+                i+=1
+            }
         }
         
         print(theGuesses)
@@ -137,14 +141,10 @@ class MainVC: UIViewController {
         guessField.text = ""
     }
     
-    
-    @objc func dismissKeyboard() {view.endEditing(true)}
-
     @IBAction func guessBtnPressed(_ sender: UIButton) {
         if guessField.text == "" {
             Helper.showAlert(view: self, title: "Error", message: "Plasae Enter A Number")
         } else {
-            print(theCount)
             setTheGame(level: level)
         }
     }

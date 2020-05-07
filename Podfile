@@ -8,6 +8,8 @@ target 'Guess Game' do
   # Pods for Guess Game
 
     pod 'SQLite.swift', '~> 0.12.0'
+    pod 'IQKeyboardManagerSwift'
+
 
 
 end

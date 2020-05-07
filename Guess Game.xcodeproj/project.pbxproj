@@ -23,6 +23,7 @@
 		E2AA95F324644AE9005D44DF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA95F224644AE9005D44DF /* Extension.swift */; };
 		E2AA95F8246453F3005D44DF /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2AA95F6246453F3005D44DF /* lose.mp3 */; };
 		E2AA95F9246453F3005D44DF /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2AA95F7246453F3005D44DF /* win.mp3 */; };
+		E2AA95FC24646258005D44DF /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA95FB24646258005D44DF /* SplashVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		E2AA95F224644AE9005D44DF /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E2AA95F6246453F3005D44DF /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
 		E2AA95F7246453F3005D44DF /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		E2AA95FB24646258005D44DF /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashVC.swift; path = "Guess Game/View/SplashVC.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		E2A797C1245DB6D700874767 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E2AA95FB24646258005D44DF /* SplashVC.swift */,
 				E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */,
 				64FCF2222227F3C200F93FAD /* MainVC.swift */,
 				E2A797C9245DC92300874767 /* GameEndVC.swift */,
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2AA95F324644AE9005D44DF /* Extension.swift in Sources */,
+				E2AA95FC24646258005D44DF /* SplashVC.swift in Sources */,
 				64FCF2232227F3C200F93FAD /* MainVC.swift in Sources */,
 				E2AA95EF246433C7005D44DF /* Helper.swift in Sources */,
 				64FCF2212227F3C200F93FAD /* AppDelegate.swift in Sources */,

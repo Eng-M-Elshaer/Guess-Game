@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Guess Game/Pods-Guess Game-frameworks.sh
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework
