@@ -21,8 +21,21 @@ class ScoresVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Helper.setBackgroundColor(vc: self)
         tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavBarStyle()
+    }
+    
+    private func setNavBarStyle(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
 }
@@ -39,7 +52,7 @@ extension ScoresVC:UITableViewDataSource {
             return UITableViewCell()
         }
         let index = indexPath.row
-        cell.configCell(number: index+1, name: nameArray[index], score: "\(scoreArray[index])%")
+        cell.configCell(number: "\(index+1)-", name: nameArray[index], score: "\(scoreArray[index])%")
         
         return cell
     }

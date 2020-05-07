@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainVC: UIViewController {
 
@@ -18,22 +19,37 @@ class MainVC: UIViewController {
     var levelCounter = 1
     let rangeArray = [3,6,9,15,20,25,30,35,40,45]
     var theGuesses = [Int]()
+    var player = AVAudioPlayer()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
+        Helper.setBackgroundColor(vc: self)
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
     }
     
-   
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.setDifficulty(level: level)
         genrerateGuess()
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+
     }
     
+    private func playSound(toneName:String){
+        
+        let audioPath = Bundle.main.path(forResource: toneName, ofType: "mp3")
+        
+        do {
+            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath:audioPath!))
+            
+        } catch {
+            
+            print("Error In Playing Sounds")
+        }
+        
+        player.prepareToPlay()
+        player.play()
+    }
     
     private func genrerateGuess(){
         
@@ -67,6 +83,7 @@ class MainVC: UIViewController {
         } else {
             self.levelCounter -= 1
             Helper.showAlert(view: self, title: "Your Luck", message: "You have \(levelCounter) Time Left")
+            playSound(toneName: "lose")
             guessField.text = ""
         }
     }
@@ -75,12 +92,13 @@ class MainVC: UIViewController {
         
         if guessField.text == String(theGuesses[9]){
             
-            setLabelText(guessRange: "Guess A Number Between 0 - 45")
+            playSound(toneName: "win")
             goToEndGameVC(score: theCount)
-            theCount = 0
+            startOver()
             
         } else if guessField.text == String(theGuesses[0]) || guessField.text == String(theGuesses[theCount]){
             
+            playSound(toneName: "win")
             theCount = theCount + 1
             setLabelText(guessRange: "Guess A Number Between 0 - \(rangeArray[theCount])")
             
@@ -123,9 +141,12 @@ class MainVC: UIViewController {
     @objc func dismissKeyboard() {view.endEditing(true)}
 
     @IBAction func guessBtnPressed(_ sender: UIButton) {
-        
-        setTheGame(level: level)
-        
+        if guessField.text == "" {
+            Helper.showAlert(view: self, title: "Error", message: "Plasae Enter A Number")
+        } else {
+            print(theCount)
+            setTheGame(level: level)
+        }
     }
     
 }

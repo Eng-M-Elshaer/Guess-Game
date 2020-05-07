@@ -12,6 +12,12 @@ class SelectDifficultyVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Helper.setBackgroundColor(vc: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     private func goToMainVC(level:Int){

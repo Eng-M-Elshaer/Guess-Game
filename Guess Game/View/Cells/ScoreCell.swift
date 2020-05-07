@@ -25,8 +25,8 @@ class ScoreCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configCell(number:Int,name:String,score:String){
-        numberLabel.text = "\(number)"
+    func configCell(number:String,name:String,score:String){
+        numberLabel.text = number
         nameLabel.text = name
         scoreLabel.text = score
     }
