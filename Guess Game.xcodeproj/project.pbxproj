@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,14 +12,18 @@
 		64FCF2262227F3C200F93FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FCF2242227F3C200F93FAD /* Main.storyboard */; };
 		64FCF2282227F3C500F93FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FCF2272227F3C500F93FAD /* Assets.xcassets */; };
 		64FCF22B2227F3C500F93FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FCF2292227F3C500F93FAD /* LaunchScreen.storyboard */; };
+		AB266868CCD7EB8D3DFA4A8E /* Pods_Guess_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D02C3C2504855182CDE5F6 /* Pods_Guess_Game.framework */; };
 		E2A797C0245DB37B00874767 /* SelectDifficultyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */; };
 		E2A797C6245DBA1F00874767 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797C4245DBA1F00874767 /* ScoreCell.swift */; };
 		E2A797C7245DBA1F00874767 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A797C5245DBA1F00874767 /* ScoreCell.xib */; };
 		E2A797CA245DC92300874767 /* GameEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797C9245DC92300874767 /* GameEndVC.swift */; };
 		E2A797CC245DC94800874767 /* ScoresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797CB245DC94800874767 /* ScoresVC.swift */; };
+		E2AA95EF246433C7005D44DF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA95EE246433C7005D44DF /* Helper.swift */; };
+		E2AA95F12464370F005D44DF /* DatabaseManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA95F02464370F005D44DF /* DatabaseManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29E29904A555654ABE522D6B /* Pods-Guess Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess Game.debug.xcconfig"; path = "Target Support Files/Pods-Guess Game/Pods-Guess Game.debug.xcconfig"; sourceTree = "<group>"; };
 		64FCF21D2227F3C200F93FAD /* Guess Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64FCF2202227F3C200F93FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64FCF2222227F3C200F93FAD /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -27,11 +31,15 @@
 		64FCF2272227F3C500F93FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64FCF22A2227F3C500F93FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64FCF22C2227F3C500F93FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E5519C463BB43D71B8F8A61 /* Pods-Guess Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess Game.release.xcconfig"; path = "Target Support Files/Pods-Guess Game/Pods-Guess Game.release.xcconfig"; sourceTree = "<group>"; };
+		A8D02C3C2504855182CDE5F6 /* Pods_Guess_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guess_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDifficultyVC.swift; sourceTree = "<group>"; };
 		E2A797C4245DBA1F00874767 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		E2A797C5245DBA1F00874767 /* ScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
 		E2A797C9245DC92300874767 /* GameEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameEndVC.swift; path = "Guess Game/View/Cells/GameEndVC.swift"; sourceTree = SOURCE_ROOT; };
 		E2A797CB245DC94800874767 /* ScoresVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScoresVC.swift; path = "Guess Game/View/ScoresVC.swift"; sourceTree = SOURCE_ROOT; };
+		E2AA95EE246433C7005D44DF /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = "/Users/elshaer/Documents/GitHub/Guess-Game/Guess Game/Helper.swift"; sourceTree = "<absolute>"; };
+		E2AA95F02464370F005D44DF /* DatabaseManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseManger.swift; path = Controller/DatabaseManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB266868CCD7EB8D3DFA4A8E /* Pods_Guess_Game.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,8 @@
 			children = (
 				64FCF21F2227F3C200F93FAD /* Guess Game */,
 				64FCF21E2227F3C200F93FAD /* Products */,
+				94D2909865B918D6421222E3 /* Pods */,
+				F6CDECCE1231B0A3F2C48DC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,12 +76,23 @@
 			isa = PBXGroup;
 			children = (
 				64FCF2202227F3C200F93FAD /* AppDelegate.swift */,
+				E2AA95EE246433C7005D44DF /* Helper.swift */,
+				E2AA95F02464370F005D44DF /* DatabaseManger.swift */,
 				E2A797C1245DB6D700874767 /* Controller */,
 				E2A797C2245DB6F000874767 /* View */,
 				E2A797C3245DB70500874767 /* Resoures */,
 				64FCF22C2227F3C500F93FAD /* Info.plist */,
 			);
 			path = "Guess Game";
+			sourceTree = "<group>";
+		};
+		94D2909865B918D6421222E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29E29904A555654ABE522D6B /* Pods-Guess Game.debug.xcconfig */,
+				7E5519C463BB43D71B8F8A61 /* Pods-Guess Game.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		E2A797C1245DB6D700874767 /* Controller */ = {
@@ -111,6 +133,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F6CDECCE1231B0A3F2C48DC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8D02C3C2504855182CDE5F6 /* Pods_Guess_Game.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64FCF22F2227F3C500F93FAD /* Build configuration list for PBXNativeTarget "Guess Game" */;
 			buildPhases = (
+				ABC120ABF060C4A7EB0FE82E /* [CP] Check Pods Manifest.lock */,
 				64FCF2192227F3C200F93FAD /* Sources */,
 				64FCF21A2227F3C200F93FAD /* Frameworks */,
 				64FCF21B2227F3C200F93FAD /* Resources */,
+				862D332ADB6CF18451119CEC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,16 +210,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		862D332ADB6CF18451119CEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Guess Game/Pods-Guess Game-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Guess Game/Pods-Guess Game-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Guess Game/Pods-Guess Game-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABC120ABF060C4A7EB0FE82E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Guess Game-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64FCF2192227F3C200F93FAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				64FCF2232227F3C200F93FAD /* MainVC.swift in Sources */,
+				E2AA95EF246433C7005D44DF /* Helper.swift in Sources */,
 				64FCF2212227F3C200F93FAD /* AppDelegate.swift in Sources */,
 				E2A797CA245DC92300874767 /* GameEndVC.swift in Sources */,
 				E2A797CC245DC94800874767 /* ScoresVC.swift in Sources */,
 				E2A797C6245DBA1F00874767 /* ScoreCell.swift in Sources */,
+				E2AA95F12464370F005D44DF /* DatabaseManger.swift in Sources */,
 				E2A797C0245DB37B00874767 /* SelectDifficultyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +408,7 @@
 		};
 		64FCF2302227F3C500F93FAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29E29904A555654ABE522D6B /* Pods-Guess Game.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -350,6 +427,7 @@
 		};
 		64FCF2312227F3C500F93FAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E5519C463BB43D71B8F8A61 /* Pods-Guess Game.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

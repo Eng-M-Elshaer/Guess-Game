@@ -19,6 +19,22 @@ class MainVC: UIViewController {
     let rangeArray = [3,6,9,15,20,25,30,35,40,45]
     var theGuesses = [Int]()
     
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+   
+    override func viewDidAppear(_ animated: Bool) {
+        self.setDifficulty(level: level)
+        genrerateGuess()
+    }
+    
+    
     private func genrerateGuess(){
         
         theGuesses.removeAll()
@@ -46,11 +62,11 @@ class MainVC: UIViewController {
     
     private func setTimesLeft(){
         if levelCounter == 1 {
-            goToVC(score: theCount)
+            goToEndGameVC(score: theCount)
             startOver()
         } else {
             self.levelCounter -= 1
-            tryAgainAlert(number: levelCounter)
+            Helper.showAlert(view: self, title: "Your Luck", message: "You have \(levelCounter) Time Left")
             guessField.text = ""
         }
     }
@@ -60,14 +76,14 @@ class MainVC: UIViewController {
         if guessField.text == String(theGuesses[9]){
             
             setLabelText(guessRange: "Guess A Number Between 0 - 45")
-            goToVC(score: theCount)
+            goToEndGameVC(score: theCount)
             theCount = 0
             
         } else if guessField.text == String(theGuesses[0]) || guessField.text == String(theGuesses[theCount]){
-          
-                theCount = theCount + 1
-                setLabelText(guessRange: "Guess A Number Between 0 - \(rangeArray[theCount])")
-           
+            
+            theCount = theCount + 1
+            setLabelText(guessRange: "Guess A Number Between 0 - \(rangeArray[theCount])")
+            
         } else {
             
             switch level {
@@ -76,7 +92,7 @@ class MainVC: UIViewController {
             case 2:
                 setTimesLeft()
             case 3:
-                goToVC(score: theCount)
+                goToEndGameVC(score: theCount)
                 startOver()
             default:
                 print("Error in switch level")
@@ -85,22 +101,11 @@ class MainVC: UIViewController {
         }
     }
     
-    private func tryAgainAlert(number:Int){
-        
-        let alert = UIAlertController(title: "Your Luck", message: "You have \(number) Time Left", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        
-        self.present(alert, animated: true)
-    }
-    
-    private func goToVC(score:Int){
+    private func goToEndGameVC(score:Int){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "GameEndVC") as! GameEndVC
         vc.score = (score + 1) * 10
         self.navigationController?.pushViewController(vc, animated: true)
-
-//        self.present(vc, animated: true, completion: nil)
     }
     
     private func startOver(){
@@ -114,19 +119,6 @@ class MainVC: UIViewController {
         guessField.text = ""
     }
     
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        
-        self.setDifficulty(level: level)
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        
-        guessRange.text = "Guess A Number Between 0 - 3"
-        
-        genrerateGuess()
-    }
     
     @objc func dismissKeyboard() {view.endEditing(true)}
 

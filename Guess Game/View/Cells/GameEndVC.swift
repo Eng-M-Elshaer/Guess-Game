@@ -7,15 +7,14 @@
 //
 
 import UIKit
+import SQLite
 
 class GameEndVC: UIViewController {
 
     
     @IBOutlet weak var stackViewOne: UIStackView!
     @IBOutlet weak var stackViewTwo: UIStackView!
-    
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var scoreLabel: UILabel!
     
     var score = 0
@@ -23,12 +22,13 @@ class GameEndVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scoreLabel.text = "You're Lucky by \(score)%"
+        DatabaseManger.shared.setDatabaseTable()
+        DatabaseManger.shared.createTable()
     }
     
     private func goToScoreVC(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "ScoresVC") as! ScoresVC
-//        self.present(vc, animated: true, completion: nil)
         self.navigationController?.pushViewController(vc, animated: true)
 
     }
@@ -36,14 +36,17 @@ class GameEndVC: UIViewController {
     private func goToSelectDifficultyVC(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "SelectDifficultyVC") as! SelectDifficultyVC
-//        self.present(vc, animated: true, completion: nil)
         self.navigationController?.pushViewController(vc, animated: true)
-
     }
     
     @IBAction func nameBtnPressed(_ sender: UIButton) {
-        stackViewOne.isHidden = true
-        stackViewTwo.isHidden = false
+        if nameTextField.text == "" {
+            Helper.showAlert(view: self, title: "Error", message: "Please Enter Your Name")
+        } else {
+            stackViewOne.isHidden = true
+            stackViewTwo.isHidden = false
+            DatabaseManger.shared.insertInTable(name: nameTextField.text!, score: "\(score)")
+        }
     }
     @IBAction func viewScoresBtnPressed(_ sender: UIButton) {
         goToScoreVC()

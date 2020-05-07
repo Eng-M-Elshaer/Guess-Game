@@ -25,10 +25,10 @@ class ScoreCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configCell(number:Int,name:String,score:Int){
+    func configCell(number:Int,name:String,score:String){
         numberLabel.text = "\(number)"
         nameLabel.text = name
-        scoreLabel.text = "\(score)"
+        scoreLabel.text = score
     }
     
 }
