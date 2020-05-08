@@ -67,11 +67,18 @@ class DatabaseManger {
         
     }
     
-    func getDataFromDatabase() -> AnySequence<Row>?{
+    private func clearArrayData(){
+        scoreArray.removeAll()
+        nameArray.removeAll()
+    }
+    
+    func getDataFromDatabase() -> AnySequence<Row>? {
+        
         print("Get Data")
         
         do {
             let scores = try self.database.prepare(self.scoreTable)
+            clearArrayData()
             for score in scores {
                 print("ID: \(score[self.idData]), name: \(score[self.nameData]), score: \(score[self.scoreData])")
                 scoreArray.append(score[self.scoreData])
@@ -81,8 +88,7 @@ class DatabaseManger {
         } catch {
             print(error)
         }
-        return nil
-        
+    return nil
     }
     
 }

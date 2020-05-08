@@ -13,6 +13,7 @@
 		64FCF2282227F3C500F93FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FCF2272227F3C500F93FAD /* Assets.xcassets */; };
 		64FCF22B2227F3C500F93FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FCF2292227F3C500F93FAD /* LaunchScreen.storyboard */; };
 		AB266868CCD7EB8D3DFA4A8E /* Pods_Guess_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D02C3C2504855182CDE5F6 /* Pods_Guess_Game.framework */; };
+		E2023F9E2465936C00CF6756 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2023F9D2465936C00CF6756 /* R.generated.swift */; };
 		E2A797C0245DB37B00874767 /* SelectDifficultyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */; };
 		E2A797C6245DBA1F00874767 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797C4245DBA1F00874767 /* ScoreCell.swift */; };
 		E2A797C7245DBA1F00874767 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A797C5245DBA1F00874767 /* ScoreCell.xib */; };
@@ -37,6 +38,7 @@
 		64FCF22C2227F3C500F93FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E5519C463BB43D71B8F8A61 /* Pods-Guess Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess Game.release.xcconfig"; path = "Target Support Files/Pods-Guess Game/Pods-Guess Game.release.xcconfig"; sourceTree = "<group>"; };
 		A8D02C3C2504855182CDE5F6 /* Pods_Guess_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guess_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2023F9D2465936C00CF6756 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDifficultyVC.swift; sourceTree = "<group>"; };
 		E2A797C4245DBA1F00874767 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		E2A797C5245DBA1F00874767 /* ScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				E2AA95EE246433C7005D44DF /* Helper.swift */,
+				E2023F9D2465936C00CF6756 /* R.generated.swift */,
 				E2AA95FA246453FB005D44DF /* Tones */,
 				64FCF2272227F3C500F93FAD /* Assets.xcassets */,
 			);
@@ -185,6 +188,7 @@
 			buildConfigurationList = 64FCF22F2227F3C500F93FAD /* Build configuration list for PBXNativeTarget "Guess Game" */;
 			buildPhases = (
 				ABC120ABF060C4A7EB0FE82E /* [CP] Check Pods Manifest.lock */,
+				E2023F9C246592E500CF6756 /* ShellScript */,
 				64FCF2192227F3C200F93FAD /* Sources */,
 				64FCF21A2227F3C200F93FAD /* Frameworks */,
 				64FCF21B2227F3C200F93FAD /* Resources */,
@@ -288,6 +292,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E2023F9C246592E500CF6756 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -304,6 +327,7 @@
 				E2A797CC245DC94800874767 /* ScoresVC.swift in Sources */,
 				E2A797C6245DBA1F00874767 /* ScoreCell.swift in Sources */,
 				E2AA95F12464370F005D44DF /* DatabaseManger.swift in Sources */,
+				E2023F9E2465936C00CF6756 /* R.generated.swift in Sources */,
 				E2A797C0245DB37B00874767 /* SelectDifficultyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

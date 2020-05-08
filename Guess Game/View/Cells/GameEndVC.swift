@@ -11,7 +11,6 @@ import SQLite
 
 class GameEndVC: UIViewController {
 
-    
     @IBOutlet weak var stackViewOne: UIStackView!
     @IBOutlet weak var stackViewTwo: UIStackView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -33,15 +32,15 @@ class GameEndVC: UIViewController {
     }
     
     private func goToScoreVC(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "ScoresVC") as! ScoresVC
+        let sb = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: R.storyboard.main.scoresVC.identifier) as! ScoresVC
         self.navigationController?.pushViewController(vc, animated: true)
 
     }
    
     private func goToSelectDifficultyVC(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SelectDifficultyVC") as! SelectDifficultyVC
+        let sb = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: R.storyboard.main.selectDifficultyVC.identifier) as! SelectDifficultyVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

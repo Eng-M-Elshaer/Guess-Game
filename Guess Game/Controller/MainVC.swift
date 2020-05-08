@@ -87,7 +87,7 @@ class MainVC: UIViewController {
         } else {
             self.levelCounter -= 1
             Helper.showAlert(view: self, title: "Your Luck", message: "You have \(levelCounter) Time Left")
-            playSound(toneName: "lose")
+            playSound(toneName: R.file.loseMp3.name)
             guessField.text = ""
         }
     }
@@ -96,13 +96,13 @@ class MainVC: UIViewController {
         
         if guessField.text == String(theGuesses[9]){
             
-            playSound(toneName: "win")
+            playSound(toneName: R.file.winMp3.name)
             goToEndGameVC(score: theCount)
             startOver()
             
         } else if guessField.text == String(theGuesses[theCount]){
             
-            playSound(toneName: "win")
+            playSound(toneName: R.file.winMp3.name)
             theCount = theCount + 1
             setLabelText(guessRange: "Guess A Number Between 0 - \(rangeArray[theCount])")
             
@@ -124,8 +124,8 @@ class MainVC: UIViewController {
     }
     
     private func goToEndGameVC(score:Int){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "GameEndVC") as! GameEndVC
+        let sb = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: R.storyboard.main.gameEndVC.identifier) as! GameEndVC
         vc.score = (score + 1) * 10
         self.navigationController?.pushViewController(vc, animated: true)
     }

@@ -21,8 +21,8 @@ class SelectDifficultyVC: UIViewController {
     }
     
     private func goToMainVC(level:Int){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+        let sb = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: R.storyboard.main.mainVC.identifier) as! MainVC
         vc.level = level
         self.navigationController?.pushViewController(vc, animated: true)
     }

@@ -13,16 +13,14 @@ class ScoresVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let scoreData = DatabaseManger.shared.getDataFromDatabase()!
+    let scoreData = DatabaseManger.shared.getDataFromDatabase()
     var scoreArray = DatabaseManger.shared.scoreArray
     var nameArray = DatabaseManger.shared.nameArray
-    fileprivate let cellIdentifier = "ScoreCell"
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         Helper.setBackgroundColor(vc: self)
-        tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView.register(UINib(nibName: R.nib.scoreCell.name, bundle: nil), forCellReuseIdentifier: R.nib.scoreCell.name)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,10 +45,9 @@ extension ScoresVC:UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ScoreCell
-            else {
-            return UITableViewCell()
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.scoreCell.name, for: indexPath) as? ScoreCell
+            else {return UITableViewCell()}
+        
         let index = indexPath.row
         cell.configCell(number: "\(index+1)-", name: nameArray[index], score: "\(scoreArray[index])%")
         

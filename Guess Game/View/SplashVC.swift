@@ -18,12 +18,11 @@ class SplashVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         sleep(2)
         goToSelectVC()
-
     }
 
     private func goToSelectVC(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SelectDifficultyVC")
+        let sb = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: R.storyboard.main.selectDifficultyVC.identifier)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
