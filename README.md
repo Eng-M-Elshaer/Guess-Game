@@ -1,8 +1,11 @@
 # Guess-Game
 Simple Guess Number Game Fun to Play
 
-![win](https://user-images.githubusercontent.com/29343159/80378598-304fca80-889d-11ea-8fbf-110665586ae5.gif)
-![Lose](https://user-images.githubusercontent.com/29343159/80381028-9d189400-88a0-11ea-8f41-e958add05f07.gif)
+![1](https://user-images.githubusercontent.com/29343159/81335839-89430e00-90a8-11ea-859f-522098b8318e.gif)
+![2](https://user-images.githubusercontent.com/29343159/81335844-8ba56800-90a8-11ea-9ece-9723a7d165de.gif)
+![3](https://user-images.githubusercontent.com/29343159/81335851-8e07c200-90a8-11ea-817e-850555009c11.gif)
+![4](https://user-images.githubusercontent.com/29343159/81335855-8f38ef00-90a8-11ea-8f5a-3983e9eaff56.gif)
+
 
 
 
