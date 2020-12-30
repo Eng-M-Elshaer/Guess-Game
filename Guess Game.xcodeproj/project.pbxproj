@@ -13,15 +13,15 @@
 		64FCF2282227F3C500F93FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FCF2272227F3C500F93FAD /* Assets.xcassets */; };
 		64FCF22B2227F3C500F93FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FCF2292227F3C500F93FAD /* LaunchScreen.storyboard */; };
 		AB266868CCD7EB8D3DFA4A8E /* Pods_Guess_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D02C3C2504855182CDE5F6 /* Pods_Guess_Game.framework */; };
-		E2023F9E2465936C00CF6756 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2023F9D2465936C00CF6756 /* R.generated.swift */; };
+		E23C2F10259CBFCD003AD49B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C2F0F259CBFCD003AD49B /* R.generated.swift */; };
 		E2A797C0245DB37B00874767 /* SelectDifficultyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */; };
 		E2A797C6245DBA1F00874767 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797C4245DBA1F00874767 /* ScoreCell.swift */; };
 		E2A797C7245DBA1F00874767 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2A797C5245DBA1F00874767 /* ScoreCell.xib */; };
 		E2A797CA245DC92300874767 /* GameEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797C9245DC92300874767 /* GameEndVC.swift */; };
 		E2A797CC245DC94800874767 /* ScoresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A797CB245DC94800874767 /* ScoresVC.swift */; };
 		E2AA95EF246433C7005D44DF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA95EE246433C7005D44DF /* Helper.swift */; };
-		E2AA95F12464370F005D44DF /* DatabaseManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA95F02464370F005D44DF /* DatabaseManger.swift */; };
-		E2AA95F324644AE9005D44DF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA95F224644AE9005D44DF /* Extension.swift */; };
+		E2AA95F12464370F005D44DF /* SQLManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA95F02464370F005D44DF /* SQLManger.swift */; };
+		E2AA95F324644AE9005D44DF /* UIView+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA95F224644AE9005D44DF /* UIView+BackgroundColor.swift */; };
 		E2AA95F8246453F3005D44DF /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2AA95F6246453F3005D44DF /* lose.mp3 */; };
 		E2AA95F9246453F3005D44DF /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2AA95F7246453F3005D44DF /* win.mp3 */; };
 		E2AA95FC24646258005D44DF /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA95FB24646258005D44DF /* SplashVC.swift */; };
@@ -38,15 +38,15 @@
 		64FCF22C2227F3C500F93FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E5519C463BB43D71B8F8A61 /* Pods-Guess Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess Game.release.xcconfig"; path = "Target Support Files/Pods-Guess Game/Pods-Guess Game.release.xcconfig"; sourceTree = "<group>"; };
 		A8D02C3C2504855182CDE5F6 /* Pods_Guess_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guess_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2023F9D2465936C00CF6756 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		E23C2F0F259CBFCD003AD49B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		E2A797BF245DB37B00874767 /* SelectDifficultyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDifficultyVC.swift; sourceTree = "<group>"; };
 		E2A797C4245DBA1F00874767 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		E2A797C5245DBA1F00874767 /* ScoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
 		E2A797C9245DC92300874767 /* GameEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameEndVC.swift; path = "Guess Game/View/Cells/GameEndVC.swift"; sourceTree = SOURCE_ROOT; };
 		E2A797CB245DC94800874767 /* ScoresVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScoresVC.swift; path = "Guess Game/View/ScoresVC.swift"; sourceTree = SOURCE_ROOT; };
 		E2AA95EE246433C7005D44DF /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Helper.swift; path = "/Users/elshaer/Documents/GitHub/Guess-Game/Guess Game/Helper.swift"; sourceTree = "<absolute>"; };
-		E2AA95F02464370F005D44DF /* DatabaseManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManger.swift; sourceTree = "<group>"; };
-		E2AA95F224644AE9005D44DF /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E2AA95F02464370F005D44DF /* SQLManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLManger.swift; sourceTree = "<group>"; };
+		E2AA95F224644AE9005D44DF /* UIView+BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+BackgroundColor.swift"; sourceTree = "<group>"; };
 		E2AA95F6246453F3005D44DF /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
 		E2AA95F7246453F3005D44DF /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
 		E2AA95FB24646258005D44DF /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashVC.swift; path = "Guess Game/View/SplashVC.swift"; sourceTree = SOURCE_ROOT; };
@@ -85,8 +85,8 @@
 		64FCF21F2227F3C200F93FAD /* Guess Game */ = {
 			isa = PBXGroup;
 			children = (
-				64FCF2202227F3C200F93FAD /* AppDelegate.swift */,
-				E2AA95F42464523C005D44DF /* Model */,
+				E23C2EF0259C9E71003AD49B /* Shared */,
+				E2AA95F42464523C005D44DF /* Manger */,
 				E2A797C1245DB6D700874767 /* Controller */,
 				E2A797C2245DB6F000874767 /* View */,
 				E2AA95F524645257005D44DF /* Extenisons */,
@@ -105,6 +105,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E23C2EF0259C9E71003AD49B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				64FCF2202227F3C200F93FAD /* AppDelegate.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E23C2F0B259CBF58003AD49B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				64FCF2242227F3C200F93FAD /* Main.storyboard */,
+				64FCF2292227F3C500F93FAD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E23C2F0E259CBFA7003AD49B /* R.Swift */ = {
+			isa = PBXGroup;
+			children = (
+				E23C2F0F259CBFCD003AD49B /* R.generated.swift */,
+			);
+			path = R.Swift;
+			sourceTree = "<group>";
+		};
 		E2A797C1245DB6D700874767 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				E2A797C8245DBA3000874767 /* Cells */,
-				64FCF2242227F3C200F93FAD /* Main.storyboard */,
-				64FCF2292227F3C500F93FAD /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,8 +153,8 @@
 		E2A797C3245DB70500874767 /* Resoures */ = {
 			isa = PBXGroup;
 			children = (
-				E2AA95EE246433C7005D44DF /* Helper.swift */,
-				E2023F9D2465936C00CF6756 /* R.generated.swift */,
+				E23C2F0B259CBF58003AD49B /* Storyboard */,
+				E23C2F0E259CBFA7003AD49B /* R.Swift */,
 				E2AA95FA246453FB005D44DF /* Tones */,
 				64FCF2272227F3C500F93FAD /* Assets.xcassets */,
 			);
@@ -147,18 +170,19 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		E2AA95F42464523C005D44DF /* Model */ = {
+		E2AA95F42464523C005D44DF /* Manger */ = {
 			isa = PBXGroup;
 			children = (
-				E2AA95F02464370F005D44DF /* DatabaseManger.swift */,
+				E2AA95EE246433C7005D44DF /* Helper.swift */,
+				E2AA95F02464370F005D44DF /* SQLManger.swift */,
 			);
-			path = Model;
+			path = Manger;
 			sourceTree = "<group>";
 		};
 		E2AA95F524645257005D44DF /* Extenisons */ = {
 			isa = PBXGroup;
 			children = (
-				E2AA95F224644AE9005D44DF /* Extension.swift */,
+				E2AA95F224644AE9005D44DF /* UIView+BackgroundColor.swift */,
 			);
 			path = Extenisons;
 			sourceTree = "<group>";
@@ -318,7 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2AA95F324644AE9005D44DF /* Extension.swift in Sources */,
+				E2AA95F324644AE9005D44DF /* UIView+BackgroundColor.swift in Sources */,
 				E2AA95FC24646258005D44DF /* SplashVC.swift in Sources */,
 				64FCF2232227F3C200F93FAD /* MainVC.swift in Sources */,
 				E2AA95EF246433C7005D44DF /* Helper.swift in Sources */,
@@ -326,8 +350,8 @@
 				E2A797CA245DC92300874767 /* GameEndVC.swift in Sources */,
 				E2A797CC245DC94800874767 /* ScoresVC.swift in Sources */,
 				E2A797C6245DBA1F00874767 /* ScoreCell.swift in Sources */,
-				E2AA95F12464370F005D44DF /* DatabaseManger.swift in Sources */,
-				E2023F9E2465936C00CF6756 /* R.generated.swift in Sources */,
+				E2AA95F12464370F005D44DF /* SQLManger.swift in Sources */,
+				E23C2F10259CBFCD003AD49B /* R.generated.swift in Sources */,
 				E2A797C0245DB37B00874767 /* SelectDifficultyVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  DatabaseManger.swift
+//  SQLManger.swift
 //  Guess Game
 //
 //  Created by Mohamed Elshaer on 5/7/20.
@@ -9,10 +9,16 @@
 import Foundation
 import SQLite
 
-class DatabaseManger {
+class SQLManger {
     
-    static var shared = DatabaseManger()
+    // MARK:- Singleton
+    private static let sharedInstance = SQLManger()
     
+    class func shared() -> SQLManger {
+        return SQLManger.sharedInstance
+    }
+    
+    // MARK: - Properties
     var database: Connection!
     
     let scoreTable = Table("scores")
@@ -23,6 +29,7 @@ class DatabaseManger {
     var scoreArray = [String]()
     var nameArray = [String]()
     
+    // MARK:- Public Methods
     func setDatabaseTable(){
         do {
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -33,7 +40,6 @@ class DatabaseManger {
             print(error)
         }
     }
-    
     func createTable(){
         
         print("CREATE TAPPED")
@@ -51,7 +57,6 @@ class DatabaseManger {
             print(error)
         }
     }
-    
     func insertInTable(name:String,score:String){
         
         print("INSERT TAPPED")
@@ -66,12 +71,6 @@ class DatabaseManger {
         }
         
     }
-    
-    private func clearArrayData(){
-        scoreArray.removeAll()
-        nameArray.removeAll()
-    }
-    
     func getDataFromDatabase() -> AnySequence<Row>? {
         
         print("Get Data")
@@ -91,4 +90,9 @@ class DatabaseManger {
     return nil
     }
     
+    // MARK:- Private Methods
+    private func clearArrayData(){
+        scoreArray.removeAll()
+        nameArray.removeAll()
+    }
 }

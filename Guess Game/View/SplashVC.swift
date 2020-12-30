@@ -10,16 +10,17 @@ import UIKit
 
 class SplashVC: UIViewController {
 
+    // MARK:- Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        Helper.setBackgroundColor(vc: self)
+        Helper.setBackgroundColor(self)
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         sleep(2)
         goToSelectVC()
     }
 
+    // MARK:- Private Methods
     private func goToSelectVC(){
         let sb = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: R.storyboard.main.selectDifficultyVC.identifier)
